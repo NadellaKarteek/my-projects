@@ -15,9 +15,9 @@
         name: htop
         state: present
     
-    - name: Install http
+    - name: Install nginx
       apt:
-        name: http
+        name: nginx
         state: present
 
     - name: Create a hello world file
