@@ -1,7 +1,7 @@
 ---
 - name: Run tasks on the local machine
   hosts: localhost
-  become: true  # Use sudo
+  become: true
   connection: local
 
   tasks:
