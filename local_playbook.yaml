@@ -26,5 +26,5 @@
 
     - name: Create a hello world file
       copy:
-        content: "Hello, Ansible was here!\n"
+        content: "Hello, Ansible was here!"
         dest: /tmp/ansible_test.txt
