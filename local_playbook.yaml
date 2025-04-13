@@ -14,6 +14,11 @@
       apt:
         name: htop
         state: present
+    
+    - name: Install http
+      apt:
+        name: http
+        state: present
 
     - name: Create a hello world file
       copy:
