@@ -1,0 +1,21 @@
+---
+- name: Run tasks on the local machine
+  hosts: localhost
+  become: true  # Use sudo
+  connection: local
+
+  tasks:
+    - name: Update apt cache
+      apt:
+        update_cache: yes
+        cache_valid_time: 3600
+
+    - name: Install htop
+      apt:
+        name: htop
+        state: present
+
+    - name: Create a hello world file
+      copy:
+        content: "Hello, Ansible was here!\n"
+        dest: /tmp/ansible_test.txt
