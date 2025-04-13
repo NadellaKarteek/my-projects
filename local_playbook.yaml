@@ -19,6 +19,10 @@
       apt:
         name: nginx
         state: present
+      register: nginx_state
+
+    - name: debug nginx_state
+      debug: var=nginx_state
 
     - name: Create a hello world file
       copy:
